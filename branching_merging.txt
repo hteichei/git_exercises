@@ -1,0 +1,44 @@
+PART I 
+
+1) git clean removes an untracked or unmerged file from the working directory
+
+2) The -d flag removes untracked directories and untracked files.  
+The -f flag forces the git repository to delete the the specified files or directories. 
+
+3) use “git checkout -b BRANCH_NAME” to create a new branch
+
+4) A fast forward merge is when git knows the sequence in which the commits occured and can organize the merged commits chronologically.  
+
+A recursive merge is when git uses an algorithm to merge branches when it cannot easily decide on the sequence of commits in different branches.  
+
+4) use “git checkout BRANCH_NAME” to move to another branch
+
+5) use “git checkout” to remove modified or deleted files form the working directory
+
+6) use “git branch -D BRANCH_NAME” to delete a branch
+
+7) “get diff” allows you to see the changes in the working tree that are not staged for the next commit
+
+8) use “git rm —cached FILE_NAME” to remove a file from the staging area
+
+9) Merge conflicts occur when the same file is committed in two different branches and the different branches’ files contents differ.  If this is the case, git does not know which commit to log, and there will be an error.  
+
+
+
+PART II
+ 
+mkdir conflicting_merges
+cd conflicting_merges
+git init
+echo hey > broccoli.txt
+git add .
+git commit -m “Initial commit”
+git checkout -b next_branch
+echo cauliflower > potato.txt
+git add .
+git commit -m “Commit potato.txt”
+git checkout master
+echo pizza > potato.txt
+git add .
+git commit -m “Commit potato.txt from master”
+git merge next_branch

@@ -1,0 +1,32 @@
+Git Exercises
+
+PART I
+
+1) mkdir learning_repo
+	- cd learning_repo
+	-git init
+	- touch one_file.txt
+	- touch two_file.txt
+	- git add .
+	- git commit -m “Initial commit”
+2) on github, create repository called learning
+	- IN TERMINAL: git remote add origin git@github.com:hteichei/learning.git
+	- git push -u origin master
+3) fork the repo on github
+	- IN TERMINAL: cd 
+	- git clone git@github.com:hteichei/git_practice.git
+	-submit pull request on github
+4) cd git_practice 
+	- git checkout -b New_Branch
+	- git push origin New_Branch
+5) Submit pull request on github
+
+
+PART II
+
+The murderer is Jeremy Bowers! 
+
+	
+
+
+	
